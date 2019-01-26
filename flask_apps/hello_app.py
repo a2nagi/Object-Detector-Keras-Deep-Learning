@@ -7,6 +7,6 @@ app = Flask(__name__)
 @app.route('/hello', methods=['POST'])
 def hello():
     body = request.get_json(force=True)
-    name = body['name]
+    name = body['name']
     response = {'greeting': 'Hello, ' + name + '!'}
     return jsonify(response)
